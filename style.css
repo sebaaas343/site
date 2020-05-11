@@ -1,0 +1,344 @@
+body{ padding: 0; margin: 0;}
+header  {
+    background-color: black;
+    color: white;
+}
+html{
+    min-width: 480px;
+}
+
+h1,h2, h3, h4, h5, h6{margin: 0;}
+header img { width: 150px; height: 40px;}
+header a{ color: white;}
+header a:hover{ color: chocolate;}
+.tableheader {
+    display: table;
+    width: 100%;
+}
+.tableheader > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+header ul  {
+    list-style: none;
+}
+header ul li{
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+header .tableheader > div:last-child {
+    text-align: right;
+    padding-right: 10px;
+}
+
+header img {
+    margin-left: 10px;
+}
+header form input[type=text]{
+    background-color: darkgray;
+}
+
+
+
+
+
+
+section{
+    background-color: lightgrey;
+
+
+}
+
+section .mainblock {
+    width: 900px;
+    margin: auto;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+
+
+}
+@media (max-width: 1024px) {
+    .tableheader { width: 100%}
+
+}
+
+
+@media (max-width: 900px) {
+    .main{
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .table, .table > * {
+        display: block;
+        width: 100%;
+    }
+
+}
+.table {
+    display: table;
+    width: 100%;
+
+}
+
+.table > div {
+    display: table-cell;
+
+}
+
+
+section img {
+    width: 150px;
+    padding: 20px 20px 20px 20px ;
+}
+
+section .trailer {
+    color: white;
+    border-style: outset;
+    border-width:  0;
+    background-color: dimgrey;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.center {
+    text-align: center;
+
+}
+section .trailer:hover{
+    color: darkslategrey;
+
+}
+
+.table1 .cell1{
+    color: orange;
+
+
+
+}
+.table1 .cell2{
+    padding-left: 100px;
+
+}
+section .form {
+    margin-top: 30px;
+
+}
+section .second_child{
+vertical-align: top;
+}
+
+.h{
+   padding-top: 20px;
+}
+.table1{
+   padding-top: 50px;
+}
+
+.cell2 > a:hover{
+    color: orange;
+
+}
+
+section .second_child ul > li {
+    color: chocolate;
+}
+
+section .table > div:last-child{
+
+    vertical-align: top;
+    padding-top: 115.6px;
+}
+span{
+    color: orange;
+}
+section .table > div * {
+white-space: nowrap;
+
+}
+section.table > div:last-child ul  {
+
+}
+
+
+section ul > li{
+    padding-left: 10px;
+}
+
+
+section .table > div:last-child ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history {
+    padding: 30px 10px 10px 30px;
+}
+
+.button {
+position: fixed;
+
+    margin-left: 15px;
+    margin-top: 15px;
+
+}
+section input {
+    background-color: orange;
+    border-style: hidden;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+
+}
+
+
+
+.review  {
+    list-style: none;
+    width: 555px;
+    background-color: #daf1db;
+    margin-left: 20px;
+}
+
+
+.review ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #777;
+}
+.review ul {
+    padding: 0;
+    margin: 0;
+}
+.review ul a{color: #777;}
+.review a:hover{color: orange}
+.revhead a {
+    color: black;
+    font-size: 19px;
+}
+.revcontent{
+    padding: 10px 20px 10px 20px;
+    position: relative;
+}
+.reva1:after{content: " | ";}
+.reva2:after{content: " | ";}
+.reva3:after{content: " | ";}
+
+
+.revtext{
+    margin-top: 30px;
+}
+.quote {
+    font-weight: bold;
+    font-family: Arial;
+}
+.posabs{
+    right: 15px;
+    color: white;
+    border-style: outset;
+    border-width:  0;
+    background-color: lightgrey;
+    position: absolute;
+    padding: 5px 10px 5px 10px;
+}
+
+
+
+.accordion{
+    margin: 20px;
+    border: 1px solid #dddddd;
+}
+.accordion-item{
+    border-bottom: 1px solid #dddddd;
+}
+.accordion-item-header{
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+    position: relative;
+    background-color: #daf1db;
+    transition: background-color ease 1s;
+}
+.accordion-item-content{
+    padding: 10px;
+    display: none;
+}
+.accordion-item-header:after{
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -5px;
+    border-top: 3px solid red;
+    border-left: 3px solid red;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-135deg);
+    transition: transform linear 0.3s;
+    transition: border-color ease 1s;
+}
+.accordion-item.opened .accordion-item-content{
+    display: block;
+}
+.accordion-item.opened .accordion-item-header:after{
+    transform: rotate(45deg);
+    border-color: #daf1db;
+
+}
+.accordion-item.opened .accordion-item-header{
+    background-color: red;
+}
+
+.slider {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: -100px;
+}
+
+section .slide1 {background-size: contain; height: 200px; width: 200px; background-image: url("orig.png");background-repeat: no-repeat;}
+section .slide2 {background-size: contain; height: 200px; width: 200px; background-image: url("orig (1).png");background-repeat: no-repeat;}
+section .slide3 {background-size: contain; height: 200px; width: 200px; background-image: url("orig (2).png");background-repeat: no-repeat;}
+section .slide4 {background-size: contain; height: 200px; width: 200px; background-image: url("orig (3).png");background-repeat: no-repeat;}
+section .slide5 {background-size: contain; height: 200px; width: 200px; background-image: url("orig (4).png");background-repeat: no-repeat;}
+section .slide6 {background-size: contain; height: 200px; width: 200px; background-image: url("orig (5).png");background-repeat: no-repeat;}
+section .slide7 {background-size: contain; height: 200px; width: 200px; background-image: url("orig (6).png");background-repeat: no-repeat;}
+
+.progress {
+    width: 300px;
+    margin-top: 100px;
+    margin-left: 300px;
+    padding: 15px;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow:  0 0 10px rgba(0,0,0,0.5);
+
+}
+.progress1{
+    border: 0;
+    height: 20px;
+    border-radius: 3px;
+    width: 5%;
+    background-color: #a7ecaa;
+    padding-left: 10px;
+}
+
+.progress1.animated {
+    animation: move linear 3s infinite;
+}
+
+@keyframes move {
+
+    0%{
+        width: 5%;
+        background-color: #a7ecaa;
+    }
+
+    100%{
+        width: 100%;
+        background-color: #a7ecaa;
+
+    }
+}
