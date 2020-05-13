@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
-    <link rel="stylesheet" href="dz3.css">
+    <title>Н</title>
+    <link rel="stylesheet" href="style.css">
     <meta name="description" content="описание страницы">
     <meta name="keywords" content="программирование, разработка, html, css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
@@ -59,12 +59,12 @@
 
 <section>
     <div class="button">
-
-        <form>
+        вверх
+       <!-- <form>
             <label>
                 <input type="submit" value="вверх">
             </label>
-        </form>
+        </form> -->
 
     </div>
 
@@ -195,7 +195,7 @@
         <p>
 
         </p>
-        <div class="review">
+        <div class="review" id="revid">
 
             <div class="revcontent">
                 <div class="posabs">
@@ -388,7 +388,7 @@
 
         </div>
 
-
+<!--
         <div class="slider">
             <a href="#" target="_blank">
                 <div class="slide1"></div>
@@ -413,7 +413,7 @@
             </a>
         </div>
 
-
+-->
         <div class="progress" id="pr">
             <div class="progress1">loading... </div>
         </div>
@@ -430,10 +430,17 @@
         <p>.</p>
         <p>.</p>
     </div>
-
 </section>
 
 <footer>
+
+    <ul class="sort">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
 
 
 </footer>
@@ -449,7 +456,6 @@
     })
 
 </script>
-
 <script>
 
     $(".accordion-item-header").on("click", function () {
@@ -496,6 +502,21 @@
             ]
         });
 
+
+    });
+
+</script>
+<script>
+    $(".button").on("click", function(){
+
+        $("html,body").animate({scrollTop:0}, "slow");
+
+    });
+
+</script>
+<script>
+
+    $( ".sort" ).sortable({
 
     });
 
