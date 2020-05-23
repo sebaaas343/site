@@ -1,87 +1,64 @@
 <?php
 
-error_reporting(E_ALL);
-session_start();
+include_once "DatabaseGuestBookRepository.php";
+include_once "GuestbookMessage.php";
+include_once "GuestbookRepository.php";
 
-include_once "functions.php";
-$m = registration();
-$message = authorization();
-$user = getCurrentUser();
 
+
+$repository = new FileGuestbookRepository();
+
+$messages = $repository->getAll();
+
+//if (isset($_POST)) {
+
+    // validate data
+
+ //   $repository->add(new GuestbookMessage($_POST["username"], $_POST["message"]));
+
+//}
 
 ?>
 
 <html lang="RU">
 
 <head>
-  <meta charset="UTF-8">
-    <title>Изучаем PHP</title>
+    <meta charset="UTF-8">
+    <title> Guestbook </title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<div class="head">
+<h1>Гостевая книга</h1>
+</div>
 
-<h3>Регистрация</h3>
-
-
-<?php if($m!=="Успешная авторизация!"): ?>
-    <?php var_dump($m);?>
-<p>
-    <?php if ($m!=false) echo $m; ?>
-</p>
-<form method="post">
-    <p>
-        <input type="text" name="first_name" placeholder="Имя">
-    </p>
-
-    <p>
-        <input type="text" name="last_name" placeholder="Фамилия">
-    </p>
-
-    <p>
-        <input type="text" name="login" placeholder="Придумайте логин">
-    </p>
-
-    <p>
-        <input type="text" name="password" placeholder="Придумайте пароль">
-    </p>
-
-    <input type="submit" value="Зарегистрироваться">
-
-</form>
-
-<?php else: ?>
-
-<?php if (!empty($message)) echo $message; ?>
-
-
-<?php if (isset($user)): ?>
-
-    <h1>
-        Привет, <?= $user->login; ?>
-    </h1>
-
-    <h2>
-        Дата регистрации: <?= $user->getRegistrationDate(); ?>
-    </h2>
-
-<?php else: ?>
+<div class="form">
+    <h2> Добавьте отзыв</h2>
 
     <form method="post">
+        <div>
+            <input type="text" name="username" placeholder="имя пользователя">
+            <p></p>
+            <input type="text" name="massage" placeholder="Оставьте сообщение">
 
-        <input type="text" name="login" placeholder="Введите логин">
-        <input type="password" name="password" placeholder="Введите пароль">
-        <input type="submit" value="Войти">
 
+        </div>
+        <p></p>
+        <div>
+            <input type="submit" value="Добавить">
+        </div>
     </form>
 
+</div>
+<div class="panel">
+<h3>Отзывы:</h3>
+    <?php foreach ($messages as $massage){
+        echo $massage["username"] . "-" .$massage["message"];
+    }  ?>
 
 
-
-<?php endif; ?>
-
-
-<?php endif; ?>
-
+</div>
 
 </body>
 
